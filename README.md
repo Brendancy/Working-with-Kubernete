@@ -40,11 +40,24 @@ Install these tools on each virtual machine.
         sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ## To confirm if the docker engine is successfully installed run:  
         sudo docker run hello-world
-# Install minikube
+# Step 3: Install minikube
        # Download Minikube and make it executable
        wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
        chmod +x minikube-linux-amd64
-       sudo mv minikube-linux-amd64 /usr/local/bin/minikube        
+       sudo mv minikube-linux-amd64 /usr/local/bin/minikube  
+## To can verify the version downloaded Run:
+       minikube version      
 
+# Step 4:  install Kubectl  
+- This is a commandline tool for intereacting with kubernetes cluster
+## Run  
+      curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+- To make the kubectl binary executable 
+# Run
+     chmod +x ./kubectl 
+- To confirm that the binary file is now in your path 
+# Run  
+     sudo mv ./kubectl /usr/local/bin/kubectl
+# To veryfiy the kubectl you downloaded run:
+    kubectl version -o json  --client
 
- 
