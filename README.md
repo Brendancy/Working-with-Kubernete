@@ -59,5 +59,19 @@ Install these tools on each virtual machine.
 # Run  
      sudo mv ./kubectl /usr/local/bin/kubectl
 # To veryfiy the kubectl you downloaded run:
-    kubectl version -o json  --client
+    kubectl version -o json  --client  
+# Step 5: Create PODs in Kubernetes 
+-       #CMD to create a new directory in this case the directory name is brendanpod
+        mkdir brendanpod  
+-       #Cmd to go into the directory 
+        cd brendanpod
+-       minikube start --driver=docker  #cmd is used to start a Kubernetes cluster using Minikube with the Docker driver.  
+-       kubectl run chibuzorpod --image=nginx #command create a new pod named chibuzorpod with an nginx image  
+-       kubectl get pods  #command is used to list all the pods running in your currently active Kubernetes cluster  
+-       kubectl get pod chibuzorpod -o yaml   #cmd will obtain and show the configuration of the Kubernetes pod in the YAML format  
+-       kubectl describe pod chibuzorpod #cmd is used to display detailed information about a specific Kubernetes pod. 
+-       kubectl delete pods --all #cmd delete all pods that were created  
+-       kubectl run odogwupod --image=redis --dry-run=client -o yaml > uzor.yaml
+        # This command generates a pod configuration for a Redis pod named "odogwupod" in YAML format, allowing you to inspect or modify the configuration before potentially applying it to the Kubernetes cluster.
 
+      
