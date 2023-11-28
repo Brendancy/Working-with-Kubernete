@@ -83,7 +83,8 @@ Install these tools on each virtual machine.
 -       kubectl get deployment odogwu-deployment -o yaml  
         #This command will output the YAML representation of the specified deployment. 
         It includes details about the deployment's metadata, specifications, and current status.
--       kubectl edit deployment odogwu-deployment #opens the deployment file here just like vim you can edit the replica
+-       kubectl edit deployment odogwu-deployment #opens the deployment file here just like vim you can edit the replica or scale  
+-       kubectl scale deployment odogwu-deployment --replica=10 #this cmd also serve the same purpose as the later
 
 
     
