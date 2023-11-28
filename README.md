@@ -68,10 +68,21 @@ Install these tools on each virtual machine.
 -       minikube start --driver=docker  #cmd is used to start a Kubernetes cluster using Minikube with the Docker driver.  
 -       kubectl run chibuzorpod --image=nginx #command create a new pod named chibuzorpod with an nginx image  
 -       kubectl get pods  #command is used to list all the pods running in your currently active Kubernetes cluster  
--       kubectl get pod chibuzorpod -o yaml   #cmd will obtain and show the configuration of the Kubernetes pod in the YAML format  
+-       kubectl get pod chibuzorpod -o yaml   #cmd will obtain and show the configuration of 
+        the Kubernetes pod in the YAML format  
 -       kubectl describe pod chibuzorpod #cmd is used to display detailed information about a specific Kubernetes pod. 
 -       kubectl delete pods --all #cmd delete all pods that were created  
 -       kubectl run odogwupod --image=redis --dry-run=client -o yaml > uzor.yaml
-        # This command generates a pod configuration for a Redis pod named "odogwupod" in YAML format, allowing you to inspect or modify the configuration before potentially applying it to the Kubernetes cluster.
+        # This command generates a pod configuration for a Redis pod named "odogwupod" in YAML format,   
+        allowing you to inspect or modify the configuration before potentially applying it to the Kubernetes 
+        cluster. 
+-       cat uzor.yaml #prints the contents of uzor.yaml file  
+-       vim uzor.yaml #vim command let you edit the file and add an additional image with a unique namespace as a sidecar
+-       kubectl apply -f uzor.yaml #create or update the changes you made on  file uzor.yaml  
+-       kubectl create deployment odogwu-deployment --image=nginx #cmd create a new deployment resource named odogwu-deployment  
+-       kubectl get deployment odogwu-deployment -o yaml  
+        #This command will output the YAML representation of the specified deployment. 
+        It includes details about the deployment's metadata, specifications, and current status.
 
-      
+
+    
